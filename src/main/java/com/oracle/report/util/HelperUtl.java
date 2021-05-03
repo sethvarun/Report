@@ -122,7 +122,7 @@ public class HelperUtl {
       JsonObjectBuilder customerIDListforGeoZone = Json.createObjectBuilder();
       for( Map.Entry <String, GeoZoneModel> entrySet : getReportModel().getGeoZoneMap().entrySet() ) {
          customerIDforGeoZone.add( entrySet.getKey(), entrySet.getValue().getCustomerIdList().size() );
-         avgBuildDurationforGeoZone.add( entrySet.getKey(), entrySet.getValue().getAvgBuildDuraion() +"s");
+         avgBuildDurationforGeoZone.add( entrySet.getKey(), entrySet.getValue().getAvgBuildDuraion() );
          customerIDListforGeoZone.add( entrySet.getKey(), entrySet.getValue().getCustomerIdList().stream().collect( Collectors.joining( "," ) ) );
       }
 
